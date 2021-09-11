@@ -1,11 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 // Prompt user to choose character length 8 - 128
-var charLength = window.prompt("How many characters would you like your password to be? Must be between 8 - 128."); {
-  console.log(charLength);
+var confirmLength = window.prompt("How many characters would you like your password to be? Must be between 8 - 128."); {
+  console.log(confirmLength);
 }
-  
 
 // Confirm lowercase letters in password 
 var confirmLowercase = window.confirm("Click OK to confirm including lowercase characters."); {
@@ -27,15 +27,23 @@ var confirmSymbols = window.confirm("Click OK to confirm including special chara
   console.log(confirmSymbols);
 }
 
-
 // Generate random password that matches selected criteria
 
 var randomPassword = {
-  confirmLowercase: getRandomLowercase,
-  confirmUppercase: getRandomUppercase, 
-  comfirmNumbers: getRandomNumbers, 
-  confirmSymbols: getRandomSymbols
+  length: confirmLength,
+  lower: confirmLowercase,
+  upper: confirmUppercase, 
+  numbers: confirmNumbers, 
+  symbols: confirmSymbols
 };
+
+console.log('randomPassword: ', randomPassword)
+
+function getRandomLength() {
+  var length = confirmLength
+  return confirmLength;
+}
+console.log(getRandomLength());
 
 function getRandomLowercase() {
   var lowercase = 'abcdefghijklmnopqrstuvwxyz'
@@ -49,7 +57,6 @@ function getRandomUppercase() {
 }
 console.log(getRandomUppercase());
 
-
 function getRandomNumbers() {
   var numbers = '1234567890'
   return numbers[Math.floor(Math.random() * numbers.length)];
@@ -62,54 +69,28 @@ function getRandomSymbols() {
 }
 console.log(getRandomSymbols());
 
-var generatedPassword = '';
-const typesCount = confirmLowercase + confirmUppercase + confirmNumbers + confirmSymbols;
-console.log('typesCount: ', typesCount);
 
-const userInputArray = [ { confirmLowercase } , { confirmUppercase }, { confirmNumbers }, { confirmSymbols }].filter
-(
-  item => Object.values(item)[0]
-);
 
-console.log('userInputArray: ', userInputArray);
-
-//this code is not working, not sure why??
-for (let i = 0; i < length; i += typesCount) {
-  userInputArray.forEach(type => {
-    var randomPassword = Object.keys(type)[0];
-    console.log('randomPassword: ', randomPassword);
-
-    generatedPassword =+ randomFunc[randomPassword]();
-  });
+// Generate password function
+function generatePassword() {
+  const userInputArray = [ { confirmLowercase } , { confirmUppercase }, { confirmNumbers }, { confirmSymbols }].filter
+  (
+    item => Object.values(item)[0]
+  );
+  console.log('userInputArray: ', userInputArray);
 }
-//this code above is not working
-
-
-// Display random password in text box
-
 
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword()   
+  var password = generatePassword();   
   var passwordText = document.querySelector("#password");
 
   passwordText.values = password;
 
 } 
 
-
-
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword); 
+  
 
-// Code I'm not sure if I'm using
-
-//function generatePassword () {
-  //var generatedPassword = '';
-  // var userInput = confirmLowercase + confirmUppercase + confirmNumbers + confirmSymbols;
-  //var userInputArray = [{ confirmLowercase }, { confirmUppercase }, { confirmNumbers }, { confirmSymbols }];
- // (item => Object.values(item) [0]);
-
-  //console.log('userInputArray: ', userInputArray);
-//}
