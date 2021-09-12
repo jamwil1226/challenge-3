@@ -18,7 +18,7 @@
 ## Console Log Error 
 ![Console log error](./assets/images/screenshot4.png)
 
-## I will get the solution to my problem before class on Tuesday and submit the assignment ASAP!
+## I will get the solution to my problem before class on Tuesday and resubmit the assignment ASAP!
 
 ### Click here to view my random password generator: https://jamwil1226.github.io/random-password-generator/
 
