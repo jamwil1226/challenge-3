@@ -1,48 +1,31 @@
-# 03 JavaScript: Password Generator
+![Random Password Generator](./assets/images/screenshot5.png)
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+# Welcome to my Random Password Generator for Challenge 3!
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+### NOTE: This random password generator is not finished yet, so check back soon!
 
-## User Story
+ ### The following JavaScript was written for this challenge. All code is working and displaying in console log up until lines 74 & 75.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+ ## JS Code 1 of 3 - all code working well and displaying in console log.
+ ![JS Code 1 of 3](./assets/images/screenshot1.png)
 
-## Acceptance Criteria
+ ## JS Code 2 of 3 
+ ![JS Code 2 of 3](./assets/images/screenshot2.png)
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+ ## JS Code 3 of 3 - this will where lines 74 and 75 return an error.
+ ![JS Code 3 of 3](./assets/images/screenshot3.png)
 
-The following image demonstrates the application functionality:
+## Console Log Error 
+![Console log error](./assets/images/screenshot4.png)
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+## I will get the solution to my problem before class on Tuesday and submit the assignment ASAP!
 
-## Review
+### Click here to view my random password generator: https://jamwil1226.github.io/random-password-generator/
 
-You are required to submit the following for review:
+### All feedback is welcome!
 
-* The URL of the deployed application.
+### I look forward to hearing from you!
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+### _Jamie Williams_ 
 
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+![Jamie Williams Headshot](./assets/images/jamie-headshot-resized.png)
