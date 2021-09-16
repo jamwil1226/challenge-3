@@ -17,8 +17,12 @@ function generatePassword() {
   var confirmLowercase = window.confirm("Click OK to confirm including lowercase characters."); 
     console.log(confirmLowercase);
 
+    var selectedCharacters = "";
+
+    
   if (confirmLowercase) {
     var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    selectedCharacters += lowercase;
     alert("Your password will contain lowercase letters.");
   }
   else {
@@ -32,6 +36,7 @@ function generatePassword() {
 
   if (confirmUppercase === true) {
     var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
+    selectedCharacters += uppercase;
     alert("Your password will contain uppercase letters.");
   }
   else {
@@ -45,6 +50,7 @@ function generatePassword() {
 
   if (confirmNumbers) {
     var numbers = '1234567890';
+    selectedCharacters += numbers;
     alert("Your password will contain numbers.");
   }
   else {
@@ -58,6 +64,7 @@ function generatePassword() {
 
   if (confirmSymbols) {
     var symbols = '!@#$%^&*()_+{}[]:<>?/';
+    selectedCharacters += symbols;
     alert("Your password will contain symbols.");
   }
   else {
@@ -69,14 +76,18 @@ function generatePassword() {
   var userInput = [lowercase, uppercase, numbers, symbols];
   console.log("user input: ", userInput);
 
-  var generatedPassword = "";
+  var generatedPasswordResult = "";
+  console.log(selectedCharacters);
 
   for (var i = 0; i < confirmLength; i++) {
-  generatedPassword = userInput(Math.floor(Math.random() * confirmLength));
+  console.log(generatedPasswordResult);
+  generatedPasswordResult += selectedCharacters.charAt(Math.floor(Math.random() * selectedCharacters.length));
   }
 
-  return generatedPassword();
-}
+  
+  console.log(generatedPasswordResult);
+  return generatedPasswordResult;
+};
 
 // generate button
 var generateBtn = document.querySelector("#generate");
@@ -86,7 +97,7 @@ function writePassword() {
   var password = generatePassword();   
   var passwordText = document.querySelector("#password");
 
-  passwordText.values = password;
+  passwordText.value = password;
 
 } 
 
